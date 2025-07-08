@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Navbar from "../components/Navbar/page";
-import Link from "next/link";
 import BackgroundImg from "../components/Background/page";
 import { useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";

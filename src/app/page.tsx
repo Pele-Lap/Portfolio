@@ -5,7 +5,6 @@ import { FaFacebook, FaInstagram, FaEnvelope, FaWhatsapp, FaGithub } from "react
 import { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../lib/firebase";
-import BackgroundImg from "./components/Background/page";
 
 type Info = {
   id: string;

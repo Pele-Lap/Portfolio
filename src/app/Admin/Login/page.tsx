@@ -23,12 +23,11 @@ export default function LoginPage() {
         const userData = querySnapshot.docs[0].data();
         localStorage.setItem("user", JSON.stringify(userData));
         router.push("/Admin/Home");
-        // redirect to dashboard or home page
       } else {
         setMessage("Invalid email or password");
       }
-    } catch (error) {
-      setMessage("Login failed");
+    } catch(error) {
+      setMessage(`Login failed ${error}`);
     }
   };
 

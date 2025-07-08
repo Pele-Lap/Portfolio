@@ -16,7 +16,6 @@ type Info = {
 };
 
 export default function AboutPage() {
-  const [showDetail, setShowDetail] = useState(false); // toggle state
   CheckAdmin();
     const [Career, setCareer] = useState<Info[]>([]);
   const [expandedId, setExpandedId] = useState<string | null>(null);

@@ -3,14 +3,6 @@ import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../../../../lib/firebase";
 
-type Info = {
-  data: string,
-  id: string,
-  About: string,
-  AboutTopic: string,
-  AboutSub: string,
-}
-
 export default function EditAbout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [AboutTopic, setAboutTopic] = useState("");

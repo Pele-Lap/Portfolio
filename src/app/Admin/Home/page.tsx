@@ -7,7 +7,6 @@ import EditHome from "../components/HomeEd/page";
 import { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../../../lib/firebase";
-import BackgroundImg from "@/app/components/Background/page";
 
 type Info = {
   id: string;
