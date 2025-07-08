@@ -1,11 +1,13 @@
 "use client";
-import Navbar from "./components/Navbar/page";
+import AdminNavbar from "../components/AdminNav/page";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaEnvelope, FaWhatsapp, FaGithub } from "react-icons/fa";
+import CheckAdmin from "../components/CheckAdmin/page";
+import EditHome from "../components/HomeEd/page";
 import { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
-import { db } from "../../lib/firebase";
-import BackgroundImg from "./components/Background/page";
+import { db } from "../../../../lib/firebase";
+import BackgroundImg from "@/app/components/Background/page";
 
 type Info = {
   id: string;
@@ -15,7 +17,8 @@ type Info = {
 };
 
 export default function Home() {
-const [Img, setImg] = useState<Info[]>([]);
+    CheckAdmin();
+    const [Img, setImg] = useState<Info[]>([]);
 
   useEffect(() => {
     const fetchImg = async () => {
@@ -31,9 +34,10 @@ const [Img, setImg] = useState<Info[]>([]);
 
   return (
     <>
-    <Navbar></Navbar>
-    {Img.map((image)=>(
+    <AdminNavbar></AdminNavbar>
+      {Img.map((image)=>(
       <div className="relative w-full h-screen" key={image.id}>
+      <EditHome></EditHome>
         {/* Background image */}
         <img
           src={image.background}
