@@ -50,9 +50,9 @@ export default function AboutPage() {
                 </div>
 
                 <div className="grid grid-cols-1 gap-10 mt-[40px] text-white">
-                  <div className="flex flex-col border border-purple-300/40 rounded-[4px] w-full">
+                  <div className="flex flex-col rounded-[4px] w-full">
                     <div className="w-full h-full">
-                      <div className="flex flex-col p-[30px] justify-center items-center gap-[40px]">
+                      <div className="flex flex-col justify-center items-center gap-[40px]">
                       {Career.map((career)=>(
                         <div className="p-4 rounded-lg shadow-lg mb-4 flex flex-col border border-white transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg w-full md:text-3xl text-xl justify-between hover:bg-pink-500/40" key={career.id}>
                           <div className="flex flex-row justify-between items-center">
@@ -72,15 +72,15 @@ export default function AboutPage() {
                             }`}
                           >
                             <div className="text-white text-[18px] md:text-[25px] bg-black/30 p-4 rounded-lg border border-purple-300">
-                              <div className="flex flex-col">
+                              <div className="flex flex-col gap-2">
                                 <p><strong>Job Title:</strong></p>
                                 <p className="ml-4"> {career.Job}</p>
                               </div>
-                              <div className="flex flex-col mt-4">
+                              <div className="flex flex-col gap-2 mt-3">
                                 <p><strong>Description:</strong></p>
                                 <p className="ml-4"> {career.subtitle}</p>
                               </div>
-                              <div className="flex flex-col mt-4">
+                              <div className="flex flex-col mt-3 gap-2">
                                 <p><strong>Since:</strong></p>
                                 <p className="ml-4"> {career.date}</p>
                               </div>

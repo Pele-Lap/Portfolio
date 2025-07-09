@@ -50,10 +50,10 @@ export default function AboutPage() {
                   </div>
       
                   <div className="grid grid-cols-1 gap-10 mt-[40px] text-white">
-                    <div className="flex flex-col border border-purple-300/40 rounded-[4px] w-full">
+                    <div className="flex flex-col rounded-[4px] w-full">
 
                       <div className="w-full h-full">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-[50px] justify-center items-center gap-[60px] ">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-[60px] ">
                         {Project.map((project)=>(
                           <div className=" border-white border gap-2 p-[30px] items-center md:text-4xl sm:text-3xl text-2xl justify-center flex flex-col rounded-[8px] backdrop-blur-3xl transition-transform duration-300 hover:translate-y-[-6px] hover:shadow-lg hover:bg-yellow-400/40" key={project.id}>
                             <div className="w-full h-50 md:w-full md:h-60 overflow-hidden shadow-lg rounded-[8px]">
